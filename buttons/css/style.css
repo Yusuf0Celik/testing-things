@@ -1,0 +1,79 @@
+html,
+body {
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  user-select: none;
+}
+
+.button {
+  width: max-content;
+  margin: 1rem 0;
+  padding: 1rem 3.25rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  transition: 300ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  background-color: rgb(16, 112, 236);
+  transition: 300ms;
+  z-index: -1;
+}
+.button-1:hover {
+  color: white;
+}
+
+.button-1:hover::before,
+.button-1:focus::before {
+  width: 100%;
+}
+
+.button-2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  height: .25rem;
+  background-color: rgb(16, 112, 236);
+  transition: 300ms;
+}
+
+.button-2:hover::before,
+.button-2:focus::before {
+  width: 100%;
+}
+
+.button-3::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: .25rem;
+  background-color: rgb(16, 112, 236);
+  transition: 300ms;
+  transform: translateX(101%);
+}
+
+.button-3:hover::before,
+.button-3:focus::before {
+  transform: translateX(0%);
+}
